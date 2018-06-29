@@ -22,14 +22,9 @@ public:
 		if (head == nullptr) {
 			return head;
 		}
-		next_pointer = head->next;
-		head->next = NULL;
-		new_head = head;
-		head = next_pointer;
 		while (head) {
 			next_pointer = head->next;
 			head->next = new_head;
-
 			new_head = head;
 			head = next_pointer;
 		}
